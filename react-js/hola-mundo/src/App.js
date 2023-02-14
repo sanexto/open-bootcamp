@@ -7,6 +7,7 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 // import TaskListComponent from './components/container/task_list';
+import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo1 from './hooks/Ejemplo1';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           {/* <h3>Contenido del props.children</h3> */}
         {/* </Ejemplo4> */}
         {/* <AllCycles /> */}
+        <GreetingStyled name='Ricardo' />
       </header>
     </div>
   );
