@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import Father from './components/container/father';
+// import Father from './components/container/father';
 // import AllCycles from './hooks/lifecycle/AllCycles';
 // import Ejemplo2 from './hooks/Ejemplo2';
 // import MiComponenteConContexto from './hooks/Ejemplo3';
@@ -34,8 +34,9 @@ function App() {
         {/* <GreetingStyled name='Ricardo' /> */}
       {/* </header> */}
       {/* Gestión de eventos */}
-      <Father />
-      {/* <TaskListComponent /> */}
+      {/* <Father /> */}
+      {/* PROYECTO FINAL */}
+      <TaskListComponent />
     </div>
   );
 }
