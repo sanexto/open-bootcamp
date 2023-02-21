@@ -8,6 +8,7 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
+import OptionalRender from './components/pure/optionalRender';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo1 from './hooks/Ejemplo1';
 
@@ -35,8 +36,10 @@ function App() {
       {/* </header> */}
       {/* Gestión de eventos */}
       {/* <Father /> */}
+      {/* Ejemplos de renderizado condicional */}
+      <OptionalRender />
       {/* PROYECTO FINAL */}
-      <TaskListComponent />
+      {/* <TaskListComponent /> */}
     </div>
   );
 }
