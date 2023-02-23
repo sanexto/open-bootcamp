@@ -8,8 +8,8 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
-import LoginFormik from './components/pure/forms/loginFormik';
-import RegisterFormik from './components/pure/forms/registerFormik';
+// import LoginFormik from './components/pure/forms/loginFormik';
+// import RegisterFormik from './components/pure/forms/registerFormik';
 // import OptionalRender from './components/pure/optionalRender';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo1 from './hooks/Ejemplo1';
@@ -42,9 +42,9 @@ function App() {
       {/* <OptionalRender /> */}
       {/* Ejemplos de uso de Formik y Yup */}
       {/* <LoginFormik /> */}
-      <RegisterFormik />
+      {/* <RegisterFormik /> */}
       {/* PROYECTO FINAL */}
-      {/* <TaskListComponent /> */}
+      <TaskListComponent />
     </div>
   );
 }
