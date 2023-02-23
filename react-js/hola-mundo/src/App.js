@@ -8,6 +8,7 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
+import LoginFormik from './components/pure/forms/loginFormik';
 // import OptionalRender from './components/pure/optionalRender';
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Ejemplo1 from './hooks/Ejemplo1';
@@ -38,8 +39,10 @@ function App() {
       {/* <Father /> */}
       {/* Ejemplos de renderizado condicional */}
       {/* <OptionalRender /> */}
+      {/* Ejemplos de uso de Formik y Yup */}
+      <LoginFormik />
       {/* PROYECTO FINAL */}
-      <TaskListComponent />
+      {/* <TaskListComponent /> */}
     </div>
   );
 }
