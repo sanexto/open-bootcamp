@@ -21,11 +21,11 @@ const LoginFormik = () => {
         <div>
             <h4>Login Formik</h4>
             <Formik
-                /// *** Initial values that the form will take
+                // *** Initial values that the form will take ***
                 initialValues={initialCredentials}
-                /// *** Yup Validation Schema
+                // *** Yup Validation Schema ***
                 validationSchema={loginSchema}
-                /// *** onSubmit Event
+                // *** onSubmit Event ***
                 onSubmit={async (values) => {
                     await new Promise((r) => setTimeout(r, 1000));
                     alert(JSON.stringify(values, null, 2));
@@ -56,7 +56,7 @@ const LoginFormik = () => {
                                 </div>
                             )
                         } */}
-                        <ErrorMessage name='email' component='div' />
+                        <ErrorMessage name="email" component="div" />
 
                         <label htmlFor="password">Password</label>
                         <Field id="password" name="password" placeholder="password" type="password" />
@@ -70,7 +70,7 @@ const LoginFormik = () => {
                                 </div>
                             )
                         } */}
-                        <ErrorMessage name='password' component='div' />
+                        <ErrorMessage name="password" component="div" />
 
                         <button type="submit">Login</button>
                         {isSubmitting ? (<p>Login your credentials...</p>) : null}
