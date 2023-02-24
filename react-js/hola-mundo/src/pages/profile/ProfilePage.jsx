@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const NotFoundPage = () => {
+const ProfilePage = ({user}) => {
 
     // useNavigate -> hook para navegar entre rutas (programaticamente)
     const navigate = useNavigate();
@@ -10,14 +10,17 @@ const NotFoundPage = () => {
         navigate(path);
     };
 
+    const goBack = () => {
+        navigate(-1);
+    };
+
     return (
         <div>
-            <h1>404 - Page Not Found</h1>
-            <button onClick={() => go('/')}>
-                Go back to home
-            </button>
+            <h1>Your profile</h1>
+            <button onClick={() => go('/tasks')}>Tasks</button>
+            <button onClick={goBack}>Go back</button>
         </div>
     );
 }
 
-export default NotFoundPage;
+export default ProfilePage;

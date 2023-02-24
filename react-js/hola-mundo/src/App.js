@@ -44,7 +44,7 @@ function App() {
       {/* <LoginFormik /> */}
       {/* <RegisterFormik /> */}
       {/* PROYECTO FINAL */}
-      <TaskListComponent />
+      {/* <TaskListComponent /> */}
     </div>
   );
 }
