@@ -14,9 +14,20 @@ const HomePage = () => {
         navigate(path);
     };
 
+    const goProps = (path) => {
+        navigate(path, {
+            state: {
+                online: true,
+            },
+        });
+    };
+
     return (
         <div>
             <h1>Home Page</h1>
+            <button onClick={() => goProps('/online-state?online=true')}>
+                Go To Page with State / Query Params
+            </button>
             <button onClick={() => go('/profile')}>
                 Go To Profile
             </button>
