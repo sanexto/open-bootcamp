@@ -11,7 +11,7 @@ const loginSchema = Yup.object().shape(
     }
 );
 
-const LoginFormik = () => {
+const LoginFormik = ({ setCredentials }) => {
 
     const initialCredentials = {
         email: '',
@@ -35,7 +35,7 @@ const LoginFormik = () => {
                     alert(JSON.stringify(values, null, 2));
                     // We save the data in the localstorage
                     localStorage.setItem('credentials', values);
-                    navigate('/profile');
+                    setCredentials(localStorage.getItem('credentials'));
                 }}
             >
                 {/* We obtain props from Formik */}

@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import NotFoundPage from './pages/404/NotFoundPage';
 import LoginPage from './pages/auth/LoginPage';
+import RegisterPage from './pages/auth/RegisterPage';
 import DashBoardPage from './pages/dashboard/DashBoardPage';
 
 function AppRoutingFinal() {
 
   // TODO: Change to value from sessionStorage (or something dinamic)
   let loggedIn = true;
+
+  const [credentials, setCredentials] = useState(localStorage.getItem('credentials'));
 
   return (
     <Router>
@@ -16,7 +20,7 @@ function AppRoutingFinal() {
         <Route
           path='/'
           element={
-            loggedIn ?
+            credentials ?
             (<Navigate to='/dashboard' />)
             :
             (<Navigate to='/login' />)
@@ -26,7 +30,7 @@ function AppRoutingFinal() {
         <Route
           path='/dashboard'
           element={
-            loggedIn ?
+            credentials ?
             (<DashBoardPage />)
             :
             (<Navigate to='/login' />)
@@ -35,7 +39,22 @@ function AppRoutingFinal() {
         {/* Login Route */}
         <Route
           path='/login'
-          element={<LoginPage />}
+          element={
+            credentials ?
+            (<Navigate to='/dashboard' />)
+            :
+            (<LoginPage setCredentials={setCredentials} />)
+          }
+        />
+        {/* Register Route */}
+        <Route
+          path='/register'
+          element={
+            credentials ?
+            (<Navigate to='/dashboard' />)
+            :
+            (<RegisterPage />)
+          }
         />
         <Route path='*' element={(<NotFoundPage />)} />
       </Routes>
