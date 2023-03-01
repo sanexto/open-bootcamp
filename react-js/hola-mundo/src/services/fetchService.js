@@ -27,3 +27,34 @@ export const getUserDetails = async (id) => {
     // We return the json
     return response.json();
 };
+
+// Hacer login
+export const login = async (email, password) => {
+
+    /**
+     * Definimos el body (cuerpo) de nuestra
+     * petición HTTP
+     */
+    let body = {
+        email,
+        password,
+    };
+
+    let response = await fetch('https://reqres.in/api/login', {
+        method: 'POST',
+        // mode: 'no-cors',
+        credentials: 'omit', // para que no tenga en cuenta las credenciales
+        cache: 'no-cache', // no queremos cachear las respuestas
+        headers: { // modificamos las cabeceras de la petición
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+    });
+
+    console.log('Response:', response);
+    console.log('Status:', response.status);
+    console.log('OK?', response.ok);
+    // We return the json
+    return response.json();
+
+};
