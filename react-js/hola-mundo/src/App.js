@@ -8,8 +8,9 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
+import FetchExample from './components/pure/FetchExample';
 // import AsyncExample from './components/pure/AsyncExample';
-import ObservableExample from './components/pure/ObservableExample';
+// import ObservableExample from './components/pure/ObservableExample';
 // import LoginFormik from './components/pure/forms/loginFormik';
 // import RegisterFormik from './components/pure/forms/registerFormik';
 // import OptionalRender from './components/pure/optionalRender';
@@ -47,7 +48,8 @@ function App() {
       {/* <RegisterFormik /> */}
       {/* Ejemplos de procesos asíncronos */}
       {/* <AsyncExample /> */}
-      <ObservableExample />
+      {/* <ObservableExample /> */}
+      <FetchExample />
       {/* PROYECTO FINAL */}
       {/* <TaskListComponent /> */}
     </div>
